@@ -7,3 +7,5 @@ class Hero(models.Model):
     hero_class = models.CharField(max_length=100)
     description = models.TextField(max_length=500)
     level = models.IntegerField()
+    def __str__(self):
+        return self.name
