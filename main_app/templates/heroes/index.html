@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Hero List</h1>
+
+{% for hero in heroes %}
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ hero.name }}</span>
+            <p>Class: {{ hero.hero_class }}</p>
+            <p>Description: {{ hero.description }}</p>
+            {% if hero.level > 1 %}
+                <p>Level: {{ hero.level }}</p>
+            {% else %}
+                <p>Level: Beginner</p>
+            {% endif %}
+        </div>
+    </div>
+{% endfor %}
+
+{% endblock %}
