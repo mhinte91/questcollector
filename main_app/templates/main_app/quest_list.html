@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Quest List</h1>
+
+{% for quest in quest_list %}
+  <a href="{% url 'quests_detail' quest.id %}">
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ quest.name }}</span>
+            <p>Color: {{ quest.description }}</p>
+        </div>
+    </div>
+  </a>
+{% endfor %}
+
+{% endblock %}
